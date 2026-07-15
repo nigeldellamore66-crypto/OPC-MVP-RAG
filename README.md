@@ -151,7 +151,7 @@ puls_events_rag/
 
 ## Évaluation
 
-La qualité du système est mesurée avec [RAGAS](https://github.com/explodinggym/ragas) sur un jeu de 30 questions fermées, construites directement depuis des chunks réels de la base.
+La qualité du système est mesurée avec RAGAS sur un jeu de 30 questions fermées, construites directement depuis des chunks réels de la base.
 
 | Métrique | POC | MVP |
 |---|---|---|
