@@ -1,0 +1,15 @@
+# Variables d'environnement
+.env
+
+# Données générées
+data/events_clean.json
+data/faiss_index/
+
+# Cache Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual env
+.venv/
+venv/

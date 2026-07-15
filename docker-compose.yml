@@ -1,0 +1,36 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+      - "6334:6334"   # grpc
+    volumes:
+      - ./data/qdrant_storage:/qdrant/storage
+    restart: unless-stopped
+
+  app:
+    build: .
+    container_name: puls_events_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    depends_on:
+      - qdrant
+    restart: unless-stopped
+
+  dashboard:
+    build: .
+    container_name: puls_events_dashboard
+    command: ["streamlit", "run", "src/dashboard.py", "--server.port=8502", "--server.address=0.0.0.0"]
+    ports:
+      - "8502:8502"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    depends_on:
+      - qdrant
+    restart: unless-stopped
