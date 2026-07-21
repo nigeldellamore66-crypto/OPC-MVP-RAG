@@ -155,7 +155,7 @@ La qualité du système est mesurée avec RAGAS sur un jeu de 30 questions ferm�
 
 | Métrique | POC | MVP |
 |---|---|---|
-| Faithfulness | 0.41 | **0.79** |
+| Faithfulness | 0.41 | **0.84** |
 | Context Recall | 0.14 | **0.80** |
 | Answer Correctness | 0.32 | **0.57** |
 
