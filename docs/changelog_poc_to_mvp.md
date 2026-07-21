@@ -176,7 +176,7 @@ Conservés/ajoutés : `qdrant-client`, `tavily-python`, `smolagents[litellm]`, `
 
 | Métrique | POC | MVP (chunks 512, tronqués) | MVP final (chunks 800) |
 |---|---|---|---|
-| faithfulness | 0.41 | 0.75 | **0.79** |
+| faithfulness | 0.41 | 0.75 | **0.84** |
 | context_recall | 0.14 | 0.80 | **0.80** |
 | answer_correctness | 0.32 | 0.57 | **0.57** |
 
