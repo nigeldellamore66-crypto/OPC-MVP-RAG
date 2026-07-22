@@ -1,0 +1,20 @@
+# ── Environnement d'évaluation RAGAS ──────────────────────────────
+# Séparé de Poetry : conflit de dépendances entre ragas/instructor
+# et mistralai v2 (voir docs/evaluation.md pour la procédure complète).
+#
+# Installation :
+#   python -m pip install -r eval/requirements.txt
+
+
+ragas==0.4.3
+datasets
+
+# mistralai v1 requis — v2 casse l'import d'instructor (dépendance de ragas)
+mistralai>=1.0,<2.0
+
+# Nécessaires pour brancher RAGAS sur Mistral
+langchain-mistralai
+langchain-community
+
+python-dotenv
+qdrant-client
